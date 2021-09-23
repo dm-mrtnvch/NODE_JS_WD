@@ -1,0 +1,9 @@
+const fs = require('fs')
+
+
+fs.mkdir('./6', () => {})
+fs.readFile('./text_for_six', 'utf8', (error, data) => {
+    fs.writeFile('./6/text.txt', data, (error) => {
+        error ? console.log(error) : null
+    })
+})
